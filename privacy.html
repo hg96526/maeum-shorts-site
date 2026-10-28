@@ -25,6 +25,8 @@
   <ul>
     <li><b>Upload permission (OAuth scope <code>youtube.upload</code>)</b> — granted only by the channel owner, used only to upload
         videos the owner has individually approved to the owner's own channel. The tool does not read private account data.</li>
+    <li><b>Comment-reply permission (OAuth scope <code>youtube.force-ssl</code>)</b> — granted only by the channel owner, used only
+        to post short replies (<code>comments.insert</code>) to public comments on the owner's own videos.</li>
     <li><b>Public data via an API key</b> — titles, view counts and subscriber counts of public Shorts (to see which kinds of stories
         people find helpful), public statistics of our own channel, and public comments posted on our own channel's videos.</li>
   </ul>
@@ -33,8 +35,9 @@
   <ul>
     <li>To upload and schedule the owner's approved videos.</li>
     <li>To choose story topics and measure how our own videos perform.</li>
-    <li>To show the owner new comments on our channel and prepare reply <i>drafts</i>. Comment text may be processed by an AI
-        model (Anthropic Claude) only to classify the comment and draft a reply; the owner reviews every reply before posting.</li>
+    <li>To reply to new public comments on our own channel. Comment text is processed by an AI model (Anthropic Claude) only to
+        classify the comment and write a short, polite reply, which the tool posts automatically twice a day. Spam is ignored,
+        each comment gets at most one reply, and at most 20 replies are posted per run. The owner can delete any reply.</li>
   </ul>
   <p>The tool does not sell, rent or share data with anyone, does not show ads, and does not build profiles of viewers.</p>
 
@@ -42,14 +45,14 @@
   <ul>
     <li>All data stays on the owner's computer. The OAuth token is stored in a local file and never leaves that computer.</li>
     <li>Cached public statistics (titles and view counts) are kept for at most 30 days and then deleted or refreshed.</li>
-    <li>Collected comments (at most the latest 200) are kept only to prepare reply drafts and are deleted within 30 days.</li>
+    <li>Collected comments (at most the latest 200) are kept only to write replies and are deleted within 30 days.</li>
     <li>To request deletion of any data about you, email us; we delete it within 7 days.</li>
   </ul>
 
   <h2>Revoking access</h2>
   <p>The channel owner can revoke the tool's access at any time from the Google security settings page:
   <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.
-  Revoking access stops all uploads immediately.</p>
+  Revoking access stops all uploads and replies immediately.</p>
 
   <h2>Contact</h2>
   <p>Email: <a href="mailto:hg96526@gmail.com">hg96526@gmail.com</a></p>
@@ -60,7 +63,8 @@
     (<a href="https://www.youtube.com/t/terms">YouTube 서비스 약관</a>, <a href="http://www.google.com/policies/privacy">Google 개인정보처리방침</a>).</p>
     <ul>
       <li>업로드 권한은 채널 주인이 승인한 영상을 주인의 채널에 올리는 데만 씁니다.</li>
-      <li>공개 쇼츠의 제목·조회수, 우리 채널의 공개 통계·공개 댓글만 읽습니다. 댓글은 답글 초안을 만들 때 AI(Anthropic Claude)가 처리할 수 있으며, 답글은 주인이 확인한 뒤에만 답니다.</li>
+      <li>공개 쇼츠의 제목·조회수, 우리 채널의 공개 통계·공개 댓글만 읽습니다.</li>
+      <li>우리 채널 댓글에는 AI(Anthropic Claude)가 쓴 짧은 답글을 하루 두 번 자동으로 답니다(스팸 제외, 댓글마다 한 번, 한 번에 최대 20개). 답글 권한(youtube.force-ssl)은 채널 주인이 준 것이며 언제든 취소할 수 있습니다.</li>
       <li>모든 자료는 주인의 PC 에만 저장되고 판매·공유하지 않습니다. 통계·댓글은 30일 안에 지웁니다.</li>
       <li>접근 권한은 <a href="https://security.google.com/settings/security/permissions">Google 보안 설정</a>에서 언제든 취소할 수 있습니다.</li>
       <li>문의·삭제 요청: hg96526@gmail.com</li>
