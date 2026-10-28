@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maeum Shorts Uploader</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="mark">쉼</div>
+  <div><h1>Maeum Shorts Uploader</h1><p>A private publishing tool for one YouTube channel</p></div>
+</header>
+<nav><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="https://www.youtube.com/@마음이쉬는이야기">Our channel</a></nav>
+<main>
+  <h2>What this is</h2>
+  <p>Maeum Shorts Uploader is a personal, single-user tool that runs only on the channel owner's own Windows PC.
+  It helps the owner of the YouTube channel <b>마음이 쉬어가는 이야기</b> (<i>"Stories where the heart rests"</i>,
+  <a href="https://www.youtube.com/@마음이쉬는이야기">@마음이쉬는이야기</a>) publish short, original storytelling videos:
+  retellings of traditional Korean temple legends, Bible stories, folk tales and old proverbs that comfort people in hard times.</p>
+  <p class="ko">「마음이 쉬어가는 이야기」 채널 주인이 자기 PC 에서만 쓰는 개인용 업로드 도구입니다.
+  옛 전설·성경 이야기·옛 지혜를 30초 쇼츠로 새로 만들어, 주인이 하나씩 확인하고 승인한 영상만 올립니다.</p>
+
+  <h2>How it works</h2>
+  <div class="box"><ol>
+    <li>The tool prepares a short video on the owner's PC (original script, locally generated illustrations and narration).</li>
+    <li>The owner receives a private preview and watches it.</li>
+    <li><b>Only when the owner taps "Upload" for that one video</b>, the tool uploads it to the owner's own channel through the
+        YouTube Data API (<code>videos.insert</code>) as a private video scheduled to go public at a chosen time.</li>
+  </ol></div>
+  <p>The tool never uploads to any other channel. It has no other users, no sign-up and no public interface.
+  It also reads public data (titles and view counts of public Shorts, public comments on our own channel) with an API key
+  to see which stories help people most and to draft replies that the owner reviews before posting.</p>
+
+  <h2>YouTube API Services</h2>
+  <p>This tool uses YouTube API Services. By using it you agree to be bound by the
+  <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+  Please also see the <a href="http://www.google.com/policies/privacy">Google Privacy Policy</a>
+  and our <a href="privacy.html">Privacy Policy</a>.</p>
+</main>
+<footer>Maeum Shorts Uploader · operated by the owner of the channel 마음이 쉬어가는 이야기 ·
+Contact: <a href="mailto:hg96526@gmail.com">hg96526@gmail.com</a> ·
+<a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></footer>
+</body>
+</html>
